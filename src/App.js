@@ -1,9 +1,10 @@
 import './App.css';
+import NewTask from './components/NewTask';
 
 function App() {
   return (
-    <div className="App">
-      Hieu Black
+    <div className="container">
+      <NewTask />
     </div>
   );
 }

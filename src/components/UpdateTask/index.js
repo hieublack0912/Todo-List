@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 
-class NewTask extends Component {
+class UpdateTask extends Component {
   render() {
     return (
-      <div className='container'>
-        <h2 className='text-center mt-4 mb-5'>New Task</h2>
+      <div className='container border border-dark border-top-0'>
         <div className='pt-5 pb-4 input-group'>
           <input
             type='text'
@@ -16,14 +15,12 @@ class NewTask extends Component {
         <textarea
           rows='7'
           className='form-control border border-dark rounded-0'></textarea>
-        <div className='pt-4 pb-5 row'>
+        <div className='pt-3 pb-5 row'>
           <div className='col-sm-6'>
             <h5>Due Date</h5>
             <input
               className='form-control border border-dark rounded-0'
               type='date'
-              defaultValue={this.dateNow()}
-              min={this.dateNow()}
             />
           </div>
           <div className='col-sm-6'>
@@ -37,7 +34,7 @@ class NewTask extends Component {
             </select>
           </div>
         </div>
-        <div className='pt-5'>
+        <div className='pb-3'>
           <button type='button' className='form-control btn btn-success'>
             Add
           </button>
@@ -45,22 +42,6 @@ class NewTask extends Component {
       </div>
     );
   }
-
-  dateNow = () => {
-    var date = new Date();
-    if ((date.getMonth() + 1).valueOf < 10) {
-      var today =
-        date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate();
-    } else {
-      today =
-        date.getFullYear() +
-        '-0' +
-        (date.getMonth() + 1) +
-        '-' +
-        date.getDate();
-    }
-    return today;
-  };
 }
 
-export default NewTask;
+export default UpdateTask;

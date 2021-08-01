@@ -15,7 +15,6 @@ class TodoList extends Component {
 
   render() {
     var { tasks, listChecks, filter } = this.props;
-    console.log(filter);
     if (filter.name) {
       tasks = tasks.filter((task) => {
         return (

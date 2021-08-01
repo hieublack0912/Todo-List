@@ -12,7 +12,7 @@ class NewTask extends Component {
       piotity: 2,
     };
   }
-  
+
   render() {
     return (
       <div className='container'>
@@ -76,10 +76,6 @@ class NewTask extends Component {
     this.setState({
       [name]: value,
     });
-    if(name === 'date')
-    {
-      console.log(value);
-    }
   };
 
   dateNow = () => {

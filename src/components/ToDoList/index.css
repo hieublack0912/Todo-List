@@ -1,0 +1,19 @@
+.todolist {
+    position: relative;
+}
+
+.bulk {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+.pl-0 {
+    padding-left: 0px;
+}
+
+.bot-no-index {
+    height: 100px;
+}

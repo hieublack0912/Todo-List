@@ -3,10 +3,6 @@ import { connect } from 'react-redux';
 import * as actions from '../../actions/index';
 
 class UpdateTask extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
 
   componentWillMount() {
     if (this.props.itemEdit && this.props.itemEdit.id !== null) {
@@ -40,7 +36,7 @@ class UpdateTask extends Component {
     return (
       <div className='container border border-dark border-top-0'>
         <form onSubmit={this.onSave}>
-          <div className='pt-5 pb-4 input-group'>
+          <div className='pt-3 pb-3 input-group'>
             <input
               type='text'
               className='form-control'
@@ -57,7 +53,7 @@ class UpdateTask extends Component {
             onChange={this.onChangeEdit}
             name='description'
           />
-          <div className='pt-3 pb-5 row'>
+          <div className='pt-3 pb-3 row'>
             <div className='col-sm-6'>
               <h5>Due Date</h5>
               <input

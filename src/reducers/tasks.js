@@ -74,6 +74,16 @@ const tasks = (state = initialState, action) => {
       state.splice(index, 1);
       localStorage.setItem('tasks', JSON.stringify(state));
       return [...state];
+    case types.REMOVE_LIST_TASK:
+      var lists = action.list;
+      lists.map((list, index) => {
+        var x = list.id;
+        index = findIndex(state, x);
+        state.splice(index, 1);
+        return [...state];
+      });
+      localStorage.setItem('tasks', JSON.stringify(state));
+      return [...state];
     default:
       return state;
   }

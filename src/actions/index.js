@@ -40,3 +40,29 @@ export const removeDetail = () => {
   };
 };
 
+export const checkTask = (id) => {
+  return {
+    type: types.CHECK_TASK,
+    id,
+  };
+};
+
+export const removeListTask = (list) => {
+  return {
+    type: types.REMOVE_LIST_TASK,
+    list,
+  };
+};
+
+export const clearList = () => {
+  return {
+    type: types.CLEAR_lIST,
+  };
+};
+
+export const filterName = (keyword) => {
+  return {
+    type: types.FILTER,
+    keyword
+  };
+};

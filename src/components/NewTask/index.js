@@ -12,6 +12,7 @@ class NewTask extends Component {
       piotity: 2,
     };
   }
+  
   render() {
     return (
       <div className='container'>
